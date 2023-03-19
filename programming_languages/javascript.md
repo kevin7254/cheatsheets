@@ -40,11 +40,72 @@ Javascript has the following primitive data types:
 
 ## Arrays
 
-Arrays are ordered collections of values that can hold any data type. They are declared with square brackets `[]`.
+* Arrays are ordered collections of values that can hold any data type. They are declared with square brackets `[]`.
+* An element can be accessed by using `arr[index]`.
 
 ```javascript
-let numbers = [1, 2, 3];
-let mixed = [1, "two", false];
+const numbers = [1, 2, 3];
+const mixed = [1, "two", false];
+
+const numberTwo = numbers[1];
+```
+
+## Array Methods
+
+### push()
+
+The `push()` method adds one or more elements to the end of an array and returns the new length of the array.
+
+```javascript
+const numbers = [1, 2, 3];
+
+numbers.push(4); // numbers now contain [1, 2].
+```
+
+
+### pop()
+
+The `pop()` method removes the last element from an array and returns that element. This method changes the length of the array.
+
+```javascript
+const numbers = [1, 2, 3];
+
+const number = numbers.pop(); // numbers now contain [1, 2]
+console.log(number); // Prints 3
+```
+
+### forEach()
+
+The `forEach()` method executes a provided function once for each array element.
+
+```javascript
+const numbers = [1, 2, 3];
+
+numbers.forEach(num => console.log(num)); // Prints 1, 2, 3 (Each on a new line)
+```
+
+### map()
+
+The `map()` method **creates a new array** populated with the results of calling a provided function on every element in the calling array.
+
+```javascript
+const numbers = [1, 2, 3];
+
+const newNumbers = numbers.map(num => num * 2);
+
+console.log(newNumbers); // Prints [2, 4, 6]
+```
+
+### filter()
+
+The `filter()` method creates a shallow copy of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
+
+```javascript
+const numbers = [1, 2, 3];
+
+const newNumbers = numbers.filter(num => num <= 2);
+
+console.log(newNumbers); // Prints [1, 2]
 ```
 
 ## Objects
@@ -52,7 +113,7 @@ let mixed = [1, "two", false];
 Objects are collections of key-value pairs. They are declared with curly braces `{}`.
 
 ```javascript
-let person = {
+const person = {
   name: "John Doe",
   age: 30,
   occupation: "developer",
@@ -70,6 +131,7 @@ Javascript has various operators for performing arithmetic, assignment, comparis
 - `*`: multiplication
 - `/`: division
 - `%`: modulus (remainder after division)
+- `**`: exponent
 
 ### Assignment Operators
 
@@ -135,7 +197,7 @@ for (let i = 0; i < 10; i++) {
 A for-in loop is used to iterate over the properties of an object.
 
 ```javascript
-let person = {
+const person = {
   name: "John Doe",
   age: 30,
 };
@@ -150,7 +212,7 @@ for (let prop in person) {
 A for-of loop is used to iterate over the values of an iterable object, such as an array.
 
 ```javascript
-let colors = ["red", "green", "blue"];
+const colors = ["red", "green", "blue"];
 
 for (let color of colors) {
   console.log(color);
