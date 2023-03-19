@@ -25,6 +25,8 @@ Javascript has the following primitive data types:
 - Boolean: either `true` or `false`.
 - Undefined: a variable that has been declared, but has no value.
 - Null: explicitly represents the absence of any object value.
+- Symbol: a unique and immutable primitive value that may be used as the key of an Object property.
+- BigInt: a numeric primitive that can represent integers with arbitrary magnitude.
 
 | Data Type | Description                                                              | Size (in bytes)                                                                                   |
 | --------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
@@ -33,7 +35,7 @@ Javascript has the following primitive data types:
 | Boolean   | Represents a logical value                                               | 1                                                                                                 |
 | Undefined | Represents an undefined value                                            | 0                                                                                                 |
 | Null      | Represents a null value                                                  | 0                                                                                                 |
-| Object    | Represents a collection of properties and methods                        | Varies                                                                                            |
+| BigInt    | Represents numeric values which are too large to be represented by `Number`                      | Varies                                                                                            |
 | Symbol    | Represents a unique identifier                                           | Varies                                                                                            |
 
 ## Arrays
