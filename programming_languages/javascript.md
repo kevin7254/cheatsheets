@@ -6,8 +6,10 @@ Javascript is a high-level, dynamically typed programming language commonly used
 
 Javascript has dynamic typing, meaning that a variable's type can change at runtime. Variables can be declared using the keywords `var`, `let`, or `const`.
 
+`var` should not be used, but might still be seen in old code.
+
 ```javascript
-var x;
+var x; //Avoid using
 let y;
 const z = 10;
 ```
